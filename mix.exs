@@ -19,7 +19,7 @@ defmodule WiseideasBlog.Mixfile do
   def application do
     [mod: {WiseideasBlog, []},
      applications: [:phoenix, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :comeonin]]
+                    :phoenix_ecto, :postgrex, :comeonin, :timex]]
   end
 
   # Specifies which paths to compile per environment.
@@ -37,6 +37,7 @@ defmodule WiseideasBlog.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.9"},
      {:comeonin, "~> 2.0"},
+     {:timex, "2.1.6"},
      {:cowboy, "~> 1.0"}]
   end
 
