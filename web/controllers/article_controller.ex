@@ -1,3 +1,4 @@
+require IEx
 defmodule WiseideasBlog.ArticleController do
   use WiseideasBlog.Web, :controller
 
@@ -29,11 +30,21 @@ defmodule WiseideasBlog.ArticleController do
     end
   end
 
-  def show(conn, %{"id" => id}) do
-    article = Repo.get!(Article, id)
+  def show(conn, %{"url" => url}) do
+    query = from a in Article,
+            where: a.url == ^url,
+            select: a
+    article = Repo.all(query)
+              |> List.first
+
     render(conn, "show.html", article: article)
   end
 
+  def show(conn, %{"id" => id}) do
+    article = Repo.get!(Article, id)
+
+    render(conn, "show.html", article: article)
+  end
   def edit(conn, %{"id" => id}) do
     article = Repo.get!(Article, id)
     changeset = Article.changeset(article)

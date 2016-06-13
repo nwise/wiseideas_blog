@@ -21,5 +21,6 @@ defmodule WiseideasBlog.Router do
     resources "/articles", ArticleController
     resources "/users", UserController
     resources "/sessions", SessionController, only: [:new, :create, :delete]
+    get "/:url", ArticleController, :show
   end
 end
