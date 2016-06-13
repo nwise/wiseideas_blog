@@ -35,7 +35,7 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :wiseideas_blog, WiseideasBlog.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
+  username: "nathanwise",
   password: "",
   database: "wiseideas_blog_dev",
   hostname: "localhost",
