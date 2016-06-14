@@ -5,7 +5,7 @@ defmodule WiseideasBlog.ArticleController do
   alias WiseideasBlog.Article
 
   plug :scrub_params, "article" when action in [:create, :update]
-  plug :authenticate when action in [:new, :create, :edit, :update, :delete]
+  plug :authenticate when action in [:index, :new, :create, :edit, :update, :delete]
 
   def index(conn, _params) do
     articles = Repo.all(Article)
