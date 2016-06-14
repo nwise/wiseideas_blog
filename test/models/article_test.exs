@@ -3,7 +3,7 @@ defmodule WiseideasBlog.ArticleTest do
 
   alias WiseideasBlog.Article
 
-  @valid_attrs %{author: "some content", body: "some content", publish_date: "2010-04-17", title: "some content"}
+  @valid_attrs %{author: "some content", url: "test", body: "some content", publish_date: "2010-04-17", title: "some content"}
   @invalid_attrs %{}
 
   test "changeset with valid attributes" do

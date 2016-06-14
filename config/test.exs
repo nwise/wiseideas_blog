@@ -12,8 +12,8 @@ config :logger, level: :warn
 # Configure your database
 config :wiseideas_blog, WiseideasBlog.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "nathanwise",
+  password: "",
   database: "wiseideas_blog_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox

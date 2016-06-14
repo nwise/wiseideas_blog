@@ -26,10 +26,10 @@ defmodule WiseideasBlog.ModelCase do
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(MyApp.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(WiseideasBlog.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(MyApp.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(WiseideasBlog.Repo, {:shared, self()})
     end
 
     :ok
