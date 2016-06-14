@@ -26,6 +26,7 @@ defmodule WiseideasBlog.ConnCase do
       import Ecto.Query, only: [from: 1, from: 2]
 
       import WiseideasBlog.Router.Helpers
+      import WiseideasBlog.TestHelpers
 
       # The default endpoint for testing
       @endpoint WiseideasBlog.Endpoint
