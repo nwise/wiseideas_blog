@@ -1,4 +1,3 @@
-require IEx
 defmodule WiseideasBlog.ArticleController do
   use WiseideasBlog.Web, :controller
 

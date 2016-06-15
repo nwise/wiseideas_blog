@@ -1,10 +1,11 @@
+require IEx
 defmodule WiseideasBlog.UserController do
   use WiseideasBlog.Web, :controller
 
   alias WiseideasBlog.User
 
   plug :scrub_params, "user" when action in [:create, :update]
-  #plug :authenticate when action in [:new, :create, :edit, :update, :delete]
+  plug :authenticate when action in [:index, :new, :create, :edit, :update, :delete]
 
   def index(conn, _params) do
     users = Repo.all(User)
@@ -65,5 +66,16 @@ defmodule WiseideasBlog.UserController do
     conn
     |> put_flash(:info, "User deleted successfully.")
     |> redirect(to: user_path(conn, :index))
+  end
+
+  defp authenticate(conn, _opts) do
+    if conn.assigns.current_user do
+      conn
+    else
+      conn
+      |> put_flash(:error, "You must be logged in to access that page")
+      |> redirect(to: page_path(conn, :index))
+      |> halt()
+    end
   end
 end

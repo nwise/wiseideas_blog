@@ -2,8 +2,8 @@ defmodule WiseideasBlog.ArticleControllerTest do
   use WiseideasBlog.ConnCase
 
   alias WiseideasBlog.Article
-  @valid_attrs %{author: "some content", body: "some content", publish_date: "2010-04-17", title: "some content"}
-  @invalid_attrs %{}
+  @valid_attrs %{author: "some content", body: "some content", publish_date: "2010-04-17", url: "some-url", title: "some content"}
+  @invalid_attrs %{body: "some content"}
 
   test "loged-out users", %{conn: conn} do
     Enum.each([
@@ -30,7 +30,7 @@ defmodule WiseideasBlog.ArticleControllerTest do
   end
 
   @tag login_as: "nate"
-  test "lists all entries on index", %{conn: conn, user: user} do
+  test "lists all entries on index", %{conn: conn} do
     conn = get conn, article_path(conn, :index)
     assert html_response(conn, 200) =~ "Listing articles"
   end
@@ -57,7 +57,7 @@ defmodule WiseideasBlog.ArticleControllerTest do
   test "shows chosen resource", %{conn: conn} do
     {:ok, article} = insert_article()
     conn = get conn, article_path(conn, :show, article)
-    assert html_response(conn, 200) =~ "Show article"
+    assert html_response(conn, 200) =~ article.title
   end
 
   test "renders page not found when id is nonexistent", %{conn: conn} do

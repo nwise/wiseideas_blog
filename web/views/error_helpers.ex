@@ -26,7 +26,11 @@ defmodule WiseideasBlog.ErrorHelpers do
     #
     #     dngettext "errors", "1 file", "%{count} files", count
     #
-    Gettext.dngettext(WiseideasBlog.Gettext, "errors", msg, msg, opts[:count], opts)
+    if count = opts[:count] do
+      Gettext.dngettext(WiseideasBlog.Gettext, "errors", msg, msg, count, opts)
+    else
+      Gettext.dgettext(WiseideasBlog.Gettext, "errors", msg, opts)
+    end
   end
 
   def translate_error(msg) do
