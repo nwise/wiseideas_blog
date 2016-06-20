@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-md-12">
-  <h2><%= gettext "Welcome to %{name}", name: "Phoenix!" %></h2>
-  <p><a href=''>A productive web framework that</a><br />does not compromise speed and maintainability.</p>
+    <h2>Title</h2>
+    <p>Snippet</p>
   </div>
 </div>
 
