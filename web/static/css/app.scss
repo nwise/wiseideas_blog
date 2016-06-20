@@ -5,7 +5,13 @@ body, form, ul, table {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-
+footer {
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #484848;
+  color: #ddd;
+  width: 730px;
+}
 /* Phoenix flash messages */
 .alert:empty { display: none; }
 
@@ -14,10 +20,6 @@ form.link, form.button {
   display: inline;
 }
 
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-}
 .logo {
   width: 519px;
   height: 71px;

@@ -12,18 +12,19 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="container" style="background: #ddd">
       <header class="header">
         <ol class="breadcrumb text-right">
           <%= if @current_user do %>
             <li><%= @current_user.username %></li>
             <li><%= link "Log out", to: session_path(@conn, :delete, @current_user), method: "delete" %></li>
-          <% else %>
-            <li><%= link "Register", to: user_path(@conn, :new) %></li>
-            <li><%= link "Log in", to: session_path(@conn, :new) %></li>
           <% end %>
         </ol>
-        <h1>WiseIdeas Blog</h1>
+        <div class='row'>
+          <div class='col-md-12'>
+            <img class='center-block' src="<%= static_path(@conn, "/images/wise-ideas-small.png") %>">
+          </div>
+        </div>
       </header>
 
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
@@ -34,6 +35,9 @@
       </main>
 
     </div> <!-- /container -->
+    <footer>
+      <p>Some footer info</p>
+    </footer>
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>

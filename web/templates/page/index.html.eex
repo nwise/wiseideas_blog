@@ -1,7 +1,7 @@
-<div class="jumbotron">
+<div class="row">
+  <div class="col-md-12">
   <h2><%= gettext "Welcome to %{name}", name: "Phoenix!" %></h2>
-  <p class="lead">A productive web framework that<br />does not compromise speed and maintainability.</p>
+  <p><a href=''>A productive web framework that</a><br />does not compromise speed and maintainability.</p>
+  </div>
 </div>
-<div class="footer">
-  <p>Some footer info</p>
-</div>
+

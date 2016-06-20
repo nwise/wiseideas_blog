@@ -73,7 +73,7 @@ h1 {
 }
 mark {
   background: #ff0;
-  color: #000;
+  color: #484848;
 }
 small {
   font-size: 80%;
@@ -260,7 +260,7 @@ th {
   }
   .table td,
   .table th {
-    background-color: #fff !important;
+    background-color: #484848 !important;
   }
   .table-bordered th,
   .table-bordered td {
@@ -1089,8 +1089,8 @@ body {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 15px;
   line-height: 1.42857143;
-  color: #ebebeb;
-  background-color: #2b3e50;
+  color: #484848;
+  background-color: #484848;
 }
 input,
 button,
@@ -1101,12 +1101,14 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #df691a;
+  /*color: #df691a;*/
+  color: #246ca5;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #df691a;
+  color: #246ca5;
+  /*color: #df691a;*/
   text-decoration: underline;
 }
 a:focus {
@@ -4700,7 +4702,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   padding: 8px 15px;
   margin-bottom: 21px;
   list-style: none;
-  background-color: #4e5d6c;
+  background-color: #ddd;
   border-radius: 0;
 }
 .breadcrumb > li {
