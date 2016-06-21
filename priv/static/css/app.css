@@ -15201,21 +15201,24 @@ body, form, ul, table {
 footer {
   margin-right: auto;
   margin-left: auto;
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
   background-color: #484848;
-  color: #ddd;
+  color: #888;
   width: 730px; }
 
 /* Phoenix flash messages */
-/* line 16, /Users/nathanwise/workspace/wiseideas_blog/web/static/css/app.scss */
+/* line 19, /Users/nathanwise/workspace/wiseideas_blog/web/static/css/app.scss */
 .alert:empty {
   display: none; }
 
 /* Phoenix inline forms in links and buttons */
-/* line 19, /Users/nathanwise/workspace/wiseideas_blog/web/static/css/app.scss */
+/* line 22, /Users/nathanwise/workspace/wiseideas_blog/web/static/css/app.scss */
 form.link, form.button {
   display: inline; }
 
-/* line 23, /Users/nathanwise/workspace/wiseideas_blog/web/static/css/app.scss */
+/* line 26, /Users/nathanwise/workspace/wiseideas_blog/web/static/css/app.scss */
 .logo {
   width: 519px;
   height: 71px;
@@ -15225,7 +15228,7 @@ form.link, form.button {
   background-size: 519px 71px; }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
-/* line 33, /Users/nathanwise/workspace/wiseideas_blog/web/static/css/app.scss */
+/* line 36, /Users/nathanwise/workspace/wiseideas_blog/web/static/css/app.scss */
 .header,
 .marketing {
   padding-right: 15px;
@@ -15233,39 +15236,39 @@ form.link, form.button {
 
 /* Customize container */
 @media (min-width: 768px) {
-  /* line 41, /Users/nathanwise/workspace/wiseideas_blog/web/static/css/app.scss */
+  /* line 44, /Users/nathanwise/workspace/wiseideas_blog/web/static/css/app.scss */
   .container {
     max-width: 730px; } }
 
-/* line 45, /Users/nathanwise/workspace/wiseideas_blog/web/static/css/app.scss */
+/* line 48, /Users/nathanwise/workspace/wiseideas_blog/web/static/css/app.scss */
 .container-narrow > hr {
   margin: 30px 0; }
 
 /* Main marketing message */
-/* line 50, /Users/nathanwise/workspace/wiseideas_blog/web/static/css/app.scss */
+/* line 53, /Users/nathanwise/workspace/wiseideas_blog/web/static/css/app.scss */
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5; }
 
 /* Supporting marketing content */
-/* line 56, /Users/nathanwise/workspace/wiseideas_blog/web/static/css/app.scss */
+/* line 59, /Users/nathanwise/workspace/wiseideas_blog/web/static/css/app.scss */
 .marketing {
   margin: 35px 0; }
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   /* Remove the padding we set earlier */
-  /* line 63, /Users/nathanwise/workspace/wiseideas_blog/web/static/css/app.scss */
+  /* line 66, /Users/nathanwise/workspace/wiseideas_blog/web/static/css/app.scss */
   .header,
   .marketing {
     padding-right: 0;
     padding-left: 0; }
   /* Space out the masthead */
-  /* line 69, /Users/nathanwise/workspace/wiseideas_blog/web/static/css/app.scss */
+  /* line 72, /Users/nathanwise/workspace/wiseideas_blog/web/static/css/app.scss */
   .header {
     margin-bottom: 30px; }
   /* Remove the bottom border on the jumbotron for visual effect */
-  /* line 73, /Users/nathanwise/workspace/wiseideas_blog/web/static/css/app.scss */
+  /* line 76, /Users/nathanwise/workspace/wiseideas_blog/web/static/css/app.scss */
   .jumbotron {
     border-bottom: 0; } }
 
