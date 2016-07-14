@@ -1,5 +1,6 @@
 <footer>
   &copy; <%= Timex.DateTime.today.year %> WiseIdeas, LLC
+<% """
   <div class='sharing'>
     <div class='twitter-share-button'>
       <a href="https://twitter.com/share" class="twitter-share-button" data-via="nwise">Tweet</a>
@@ -10,4 +11,5 @@
       <script type="IN/Share"></script>
     </div>
   </div>
+  """ %>
 </footer>
