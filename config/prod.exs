@@ -13,7 +13,7 @@ use Mix.Config
 # which you typically run after static files are built.
 config :wiseideas_blog, WiseideasBlog.Endpoint,
   http: [port: {:system, "PORT"}],
-  url: [host: "wiseideas-blog.herokuapp.com", port: 80],
+  url: [scheme: 'https', host: "wiseideas-blog.herokuapp.com", port: 443],
   forxe_ssl: [rewrite_on: [:x_forwarded_proto]],
   cache_static_manifest: "priv/static/manifest.json",
   secret_key_base: System.get_env("SECRET_KEY_BASE")
@@ -65,6 +65,5 @@ config :logger, level: :info
 config :wiseideas_blog, WiseideasBlog.Repo,
   adapter: Ecto.Adapters.Postgres,
   url: System.get_env("DATABSE_URL"),
-  database: System.get_env("DATABASE_NAME"),
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10"),
   ssl: true
