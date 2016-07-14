@@ -64,5 +64,5 @@ config :logger, level: :info
 config :wiseideas_blog, WiseideasBlog.Repo,
   adapter: Ecto.Adapters.Postgres,
   url: System.get_env("DATABSE_URL"),
-  database: System.get_env("DATABASE_NAME"),
+  #database: System.get_env("DATABASE_NAME"),
   pool_size: 18
