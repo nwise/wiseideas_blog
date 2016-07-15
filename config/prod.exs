@@ -13,7 +13,7 @@ use Mix.Config
 config :wiseideas_blog, WiseideasBlog.Endpoint,
   http: [port: {:system, "PORT"}],
   url: [scheme: 'https', host: "wiseideas-blog.herokuapp.com", port: 443],
-  forxe_ssl: [rewrite_on: [:x_forwarded_proto]],
+  force_ssl: [rewrite_on: [:x_forwarded_proto]],
   cache_static_manifest: "priv/static/manifest.json",
   secret_key_base: System.get_env("SECRET_KEY_BASE")
 
@@ -64,5 +64,6 @@ config :logger, level: :info
 config :wiseideas_blog, WiseideasBlog.Repo,
   adapter: Ecto.Adapters.Postgres,
   url: System.get_env("DATABSE_URL"),
+  database: System.get_env("DATABSE_NAME"),
   pool_size: 10,
   ssl: true
