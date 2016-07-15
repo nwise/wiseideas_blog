@@ -4,7 +4,7 @@ defmodule WiseideasBlog.Mixfile do
   def project do
     [app: :wiseideas_blog,
      version: "0.0.1",
-     elixir: "~> 1.0",
+     elixir: "~> 1.2.3",
      elixirc_paths: elixirc_paths(Mix.env),
      compilers: [:phoenix, :gettext] ++ Mix.compilers,
      build_embedded: Mix.env == :prod,
@@ -31,7 +31,7 @@ defmodule WiseideasBlog.Mixfile do
   # Type `mix help deps` for examples and options.
   defp deps do
     [{:phoenix, "~> 1.1.4"},
-     {:postgrex, ">= 0.0.0"},
+     {:postgrex, ">= 0.11.2"},
      {:phoenix_ecto, "~> 3.0.0-rc"},
      {:phoenix_html, "~> 2.4"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
