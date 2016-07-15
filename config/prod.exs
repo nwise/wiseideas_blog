@@ -63,7 +63,7 @@ config :logger, level: :info
 
 config :wiseideas_blog, WiseideasBlog.Repo,
   adapter: Ecto.Adapters.Postgres,
-  url: System.get_env("DATABSE_PATH"),
+  hostname: System.get_env("DATABSE_PATH"),
   database: System.get_env("DATABASE_NAME"),
   username: System.get_env("DATABASE_USER"),
   password: System.get_env("DATABASE_PASSWORD"),
