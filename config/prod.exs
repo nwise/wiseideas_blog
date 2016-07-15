@@ -63,6 +63,9 @@ config :logger, level: :info
 
 config :wiseideas_blog, WiseideasBlog.Repo,
   adapter: Ecto.Adapters.Postgres,
-  url: System.get_env("DATABSE_URL"),
-  #database: System.get_env("DATABASE_NAME"),
+  url: System.get_env("DATABSE_PATH"),
+  database: System.get_env("DATABASE_NAME"),
+  username: System.get_env("DATABASE_USER"),
+  password: System.get_env("DATABASE_PASSWORD"),
+  port: 5432,
   pool_size: 18
