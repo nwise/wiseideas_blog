@@ -10,4 +10,11 @@ config :wiseideas_blog, WiseideasBlog.Endpoint,
 config :logger, level: :warn
 
 # Configure your database
-import_config "test.secret.exs"
+config :wiseideas_blog, WiseideasBlog.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  username: "postgres",
+  password: "postgres",
+  database: "wiseideas_blog_test",
+  hostname: "localhost",
+  pool: Ecto.Adapters.SQL.Sandbox
+  # import_config "test.secret.exs"
