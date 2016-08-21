@@ -12,7 +12,7 @@ use Mix.Config
 # which you typically run after static files are built.
 config :wiseideas_blog, WiseideasBlog.Endpoint,
   http: [port: 8888],
-  url: [scheme: 'https', host: "blog.wise-ideas.com" ],
+  url: [scheme: 'http', host: "blog.wise-ideas.com" ],
   cache_static_manifest: "priv/static/manifest.json",
   secret_key_base: System.get_env("SECRET_KEY_BASE")
 
