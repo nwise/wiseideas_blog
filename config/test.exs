@@ -17,3 +17,4 @@ config :wiseideas_blog, WiseideasBlog.Repo,
   database: "wiseideas_blog_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
+  # import_config "test.secret.exs"
