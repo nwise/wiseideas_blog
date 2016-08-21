@@ -62,9 +62,3 @@ config :logger, level: :info
 #     config :wiseideas_blog, WiseideasBlog.Endpoint, root: "."
 import_config "prod.secret.exs"
 
-config :wiseideas_blog, WiseideasBlog.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  url: System.get_env("DATABSE_URL"),
-  database: System.get_env("DATABSE_NAME"),
-  pool_size: 10,
-  ssl: true
