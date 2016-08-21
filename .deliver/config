@@ -6,10 +6,6 @@ BUILD_HOST="blog"
 BUILD_USER="root"
 BUILD_AT="/tmp/edeliver/blog/builds"
 
-STAGING_HOSTS="blog"
-STAGING_USER="root"
-DELIVER_TO="/srv/www/staging"
-
 PRODUCTION_HOSTS="blog"
 PRODUCTION_USER="root"
 DELIVER_TO="/srv/www/production"
