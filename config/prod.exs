@@ -60,6 +60,7 @@ config :logger, level: :info
 # for the new static assets to be served after a hot upgrade:
 #
 #     config :wiseideas_blog, WiseideasBlog.Endpoint, root: "."
+import_config "prod.secret.exs"
 
 config :wiseideas_blog, WiseideasBlog.Repo,
   adapter: Ecto.Adapters.Postgres,

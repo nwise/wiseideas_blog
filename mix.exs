@@ -40,7 +40,7 @@ defmodule WiseideasBlog.Mixfile do
      {:comeonin, "~> 2.0"},
      {:timex, "2.1.6"},
      {:edeliver, "~> 1.4.0" },
-     {:distillery, ">= 0.8.0"},
+     {:exrm, "~> 1.0.3"},
      {:cowboy, "~> 1.0"}]
   end
 
