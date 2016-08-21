@@ -1,6 +1,6 @@
 # .deliver/config
 
-APP="wiseideas-blog"
+APP="wiseideas_blog"
 
 BUILD_HOST="blog"
 BUILD_USER="root"
