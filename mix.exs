@@ -3,7 +3,7 @@ defmodule WiseideasBlog.Mixfile do
 
   def project do
     [app: :wiseideas_blog,
-     version: "0.1.3",
+     version: "0.1.4",
      elixir: "~> 1.3",
      elixirc_paths: elixirc_paths(Mix.env),
      compilers: [:phoenix, :gettext] ++ Mix.compilers,
@@ -41,7 +41,7 @@ defmodule WiseideasBlog.Mixfile do
      {:timex, "2.1.6"},
      {:edeliver, "~> 1.4.0" },
      {:exrm, "~> 1.0.3"},
-     {:earmark, "~> 0.2.0"},
+     {:earmark, "~> 1.0"},
      {:cowboy, "~> 1.0"}]
   end
 
