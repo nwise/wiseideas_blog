@@ -1,8 +1,7 @@
-<% require Earmark %>
 <h2><%= @article.title %></h2>
 
 <div class='article-body'>
-  <%= raw Earmark.to_html(@article.body) %>
+  <%= raw Cmark.to_html(@article.body) %>
 </div>
 
 <div class='article-footer'>
