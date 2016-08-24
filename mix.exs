@@ -3,7 +3,7 @@ defmodule WiseideasBlog.Mixfile do
 
   def project do
     [app: :wiseideas_blog,
-     version: "0.1.5",
+     version: "0.1.6",
      elixir: "~> 1.3",
      elixirc_paths: elixirc_paths(Mix.env),
      compilers: [:phoenix, :gettext] ++ Mix.compilers,
@@ -19,7 +19,7 @@ defmodule WiseideasBlog.Mixfile do
   def application do
     [mod: {WiseideasBlog, []},
      applications: [:phoenix, :phoenix_html, :cowboy, :logger, :gettext, :phoenix_pubsub,
-                    :edeliver, :phoenix_ecto, :postgrex, :comeonin, :timex]]
+                    :cmark, :earmark, :edeliver, :phoenix_ecto, :postgrex, :comeonin, :timex]]
   end
 
   # Specifies which paths to compile per environment.
@@ -41,6 +41,7 @@ defmodule WiseideasBlog.Mixfile do
      {:timex, "2.1.6"},
      {:edeliver, "~> 1.4.0" },
      {:exrm, "~> 1.0.3"},
+     {:earmark, "~> 1.0.0"},
      {:cmark, "~> 0.6"},
      {:cowboy, "~> 1.0"}]
   end
