@@ -4,7 +4,7 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th>Body</th>
+      <th>URL</th>
       <th>Publish date</th>
       <th>Author</th>
 
@@ -15,7 +15,7 @@
 <%= for article <- @articles do %>
     <tr>
       <td><%= article.title %></td>
-      <td><%= article.body %></td>
+      <td><%= article.url %></td>
       <td><%= article.publish_date %></td>
       <td><%= article.author %></td>
 

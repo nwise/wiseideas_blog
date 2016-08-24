@@ -25,7 +25,7 @@
             <%= if @conn.request_path == "/" do %>
             <img class='center-block' src="<%= static_path(@conn, "/images/wise-ideas-small.png") %>">
             <% else %>
-            <img class='' src="<%= static_path(@conn, "/images/logo.png") %>">
+              <a href="/"><img class='' src="<%= static_path(@conn, "/images/logo.png") %>"></a>
             <% end %>
           </div>
         </div>
@@ -37,6 +37,11 @@
       <main role="main">
       <%= render @view_module, @view_template, assigns %>
       </main>
+      <aside >
+      <%= for month <- @months do %>
+        <%= month %>,
+      <% end %>
+      </aside>
 
     </div> <!-- /container -->
     <%= render WiseideasBlog.SharedView, "footer.html", %{} %>

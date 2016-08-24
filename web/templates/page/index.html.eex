@@ -1,7 +1,9 @@
+<%= for article <- @articles do %>
 <div class="row">
   <div class="col-md-12">
-    <h2>Title</h2>
-    <p>Snippet</p>
+    <h2><%= article.title %></h2>
+    <p><%= article.author %></p>
   </div>
 </div>
+<% end %>
 

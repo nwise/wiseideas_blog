@@ -24,4 +24,15 @@ defmodule WiseideasBlog.Article do
     model
     |> cast(params, @required_fields, @optional_fields)
   end
+
+  def published do
+    query = from a in __MODULE__,
+            where: a.published_date > Timex.Date.today
+  end
+
+  def months do
+    query = from a in __MODULE__,
+            select: fragment("DISTINCT to_char(publish_date, 'Mon, YYYY') AS MONTH")
+    Repo.all(query)
+  end
 end
